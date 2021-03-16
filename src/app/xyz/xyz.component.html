@@ -1,0 +1,65 @@
+<div class="app-xyz">
+  <div class="id">
+    LOT PEINT {{ BatchNumber }}<br />
+    <svg id="app-xyz-barcode"></svg>
+  </div>
+  <table class="paint-batch">
+    <tbody>
+      <tr>
+        <th>
+          LOT PEINT
+        </th>
+        <td>
+          {{ BatchNumber }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          CONFIGID
+        </th>
+        <td>
+          {{ CONFIGID }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          POUDRE
+        </th>
+        <td>
+          {{ PowderID }}#{{ StepNumber }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="line-items">
+    <thead>
+      <tr>
+        <th colspan=4>PICKING</th>
+        <th class="spacing"></th>
+        <th colspan=3>PEINTURE</th>
+      </tr>
+      <tr>
+        <th>LOCATION</th>
+        <th>ITEMID</th>
+        <th>QTY</th>
+        <th>NOTE</th>
+        <th>ITEMNAME</th>
+        <th>ITEMID</th>
+        <th>QTY</th>
+        <th>NOTES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lineItem of lineItems">
+        <td>{{ lineItem.BinLocation }}</td>
+        <td>{{ lineItem.RawItem.ITEMID }}</td>
+        <td>{{ lineItem.RequestedQuantity }}</td>
+        <td>{{ lineItem.RawItem.Notes }}</td>
+        <td>{{ lineItem.RawItem.ITEMNAME }}</td>
+        <td>{{ lineItem.PaintedItem.ITEMID }}</td>
+        <td>{{ lineItem.PaintedQuantity }}</td>
+        <td>{{ lineItem.PaintedItem.Notes }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+.app-xyz {
+  width: 100%;
+	font-family: Georgia, serif;
+	background: none;
+	color: black;
+
+  .id {
+    float: right;
+  }
+  .paint-batch {
+    clear: left;
+
+    th {
+      text-align: left;
+    }
+  }
+  .line-items {
+    width: 100%;
+    border-collapse: collapse;
+
+    th:not(.spacing), td {
+      border: 1px solid black;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.app {
+  h1 {
+    font-size: 3rem;
+    background: lemonchiffon;
+    text-align: center;
+  }
+
+  h2 {
+    text-decoration: underline;
+  }
+
+  main {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: .3rem;
+
+    .editor img {
+      width: 100%;
+    }
+
+    .printButton {
+      width: 100%;
+      text-align: center;
+
+      button {
+        font-size: 2rem;
+        padding: .3em .5em;
+        color: navy;
+        background: aliceblue;
+        cursor: pointer;
+
+        &:hover {
+          background: azure;
+        }
+      }
+    }
+  }
+  footer {
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 1.5rem;
+      background: aliceblue;
+      font-size: 1.3rem;
+      padding: .5em .8em;
+    }
+  }
+  .print-only {
+    display: none;
+  }
+}
+
+@media print {
+  .app {
+    h1, h2, h3, h4, h5, h6 {
+      page-break-inside: avoid;
+      page-break-after: avoid;
+    }
+    a, blockquote, img, li, tr, pre {
+      page-break-inside: avoid;
+    }
+    ul, ol, dl {
+      page-break-before: avoid;
+    }
+
+    h1 {
+      font-size: 16pt;
+      background: none;
+    }
+
+    h2 {
+      float: left;
+    }
+
+    a:link, a:visited, a {
+      background: transparent;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a[href]:after {
+      content: " (" attr(href) ") ";
+      font-weight: normal;
+    }
+
+    main {
+      max-width: unset;
+    }
+
+    section:not(.print-ok) {
+      display: none;
+    }
+
+    .print-only {
+      display: unset;
+    }
+  }
+  @page {
+    margin: 3cm 2cm;
+  }
+}
