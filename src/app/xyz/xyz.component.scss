@@ -20,6 +20,10 @@
 
     th:not(.spacing), td {
       border: 1px solid black;
+      padding: .3em .2em;
     }
+  }
+  .nobr {
+    white-space: nowrap;
   }
 }
