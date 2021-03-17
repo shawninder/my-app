@@ -103,7 +103,7 @@
       max-width: unset;
     }
 
-    section:not(.print-ok) {
+    section:not(.print-ok), header:not(.print-ok) {
       display: none;
     }
 
