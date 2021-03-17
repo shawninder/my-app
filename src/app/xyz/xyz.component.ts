@@ -24,13 +24,12 @@ interface LineItem {
 })
 export class XyzComponent implements OnInit {
   @Input() BatchNumber = 'BatchNumber';
-  @Input() BarCode = 'BarCode';
   @Input() CONFIGID = 'CONFIGID';
   @Input() PowderID = 'PowderID';
   @Input() StepNumber = 1;
   @Input() lineItems: Array<LineItem> = [];
 
   ngOnInit(): void {
-    jsbarcode('#app-xyz-barcode', this.BarCode);
+    jsbarcode('#app-xyz-barcode', this.BatchNumber);
   }
 }

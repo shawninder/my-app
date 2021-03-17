@@ -9,7 +9,6 @@ export class AppComponent {
   title = 'my-app';
   data = {
     BatchNumber: '34',
-    BarCode: '2943495835',
     CONFIGID: 'BK',
     PowderID: 'PROTEC',
     StepNumber: 1,

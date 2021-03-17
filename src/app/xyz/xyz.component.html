@@ -51,13 +51,13 @@
     </thead>
     <tbody>
       <tr *ngFor="let lineItem of lineItems">
-        <td>{{ lineItem.BinLocation }}</td>
-        <td>{{ lineItem.RawItem.ITEMID }}</td>
-        <td>{{ lineItem.RequestedQuantity }}</td>
+        <td class="nobr">{{ lineItem.BinLocation }}</td>
+        <td class="nobr">{{ lineItem.RawItem.ITEMID }}</td>
+        <td class="nobr">{{ lineItem.RequestedQuantity }}</td>
         <td>{{ lineItem.RawItem.Notes }}</td>
         <td>{{ lineItem.RawItem.ITEMNAME }}</td>
-        <td>{{ lineItem.PaintedItem.ITEMID }}</td>
-        <td>{{ lineItem.PaintedQuantity }}</td>
+        <td class="nobr">{{ lineItem.PaintedItem.ITEMID }}</td>
+        <td class="nobr">{{ lineItem.PaintedQuantity }}</td>
         <td>{{ lineItem.PaintedItem.Notes }}</td>
       </tr>
     </tbody>
